@@ -7,8 +7,8 @@ RSpec.feature "Root page" do
   	visit "/"
 
   	expect(page).to have_content("Detector App")
-  	expect(page).to have_link("Sign_In")
-  	expect(page).to have_link("Sign_Up")
+  	expect(page).to have_link("Sign In")
+  	expect(page).to have_link("Sign Up")
 
   end
 
