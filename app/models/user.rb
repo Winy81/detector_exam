@@ -11,4 +11,6 @@ class User < ApplicationRecord
   	[first_name, last_name].join(" ")
   end
   
+  has_one :address, dependent: :destroy
+  
 end
