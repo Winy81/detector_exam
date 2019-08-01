@@ -4,6 +4,6 @@
 <h4>Your user ID: <%= @user_details.id %></h4>
 <h4>Your email: <%= @user_details.email %></h4>
 
-<h4>Yout Potcode: <%= @address_details.postcode %></h4>
+<h5><%= link_to "Add address", new_address_path %></h5>
 
 <h3><%= link_to "Sign Out", destroy_user_session_path, method: :delete  %></h3>

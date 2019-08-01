@@ -1,12 +1,12 @@
-def AddressesController < ApplicationController
+class AddressesController < ApplicationController
 
-  def create
-    @address = current_user.address.new(address_params)
+  def new
+    @address = current_user.address.new
   end
 
   def create
   	if current_user
-      @address = current_user.address.new(address_params)
+      @address = current_user.address.new
       if @address.save
       	flash[:notice] = "Address has been added"
       	redirect_to dashboards_path
@@ -19,8 +19,8 @@ def AddressesController < ApplicationController
 
   private
 
-  def comment_params
-    params.require(:address).permit(:postcode)
+  def address_params
+    params.require(:address).permit(:postcode, :user_id)
   end
 
 end

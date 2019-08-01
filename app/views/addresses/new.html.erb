@@ -1,0 +1,7 @@
+<% form_for url_for(controller: 'address', action: 'new') do |f| %>
+
+  <%= f.label :postcode %>
+  <%= f.text_field :postcode %>
+
+  <%= f.submit  %> 
+<% end %>
