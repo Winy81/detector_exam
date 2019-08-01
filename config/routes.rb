@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   resources :dashboards
 
-  resources :addresses, only: [:create]
+  resources :addresses, only: [:new, :create]
 end
