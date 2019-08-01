@@ -1,4 +1,7 @@
 <h1>Dashboards#index</h1>
-<h4>Welcome:<%= current_user.first_name %></h4>
+
+<h4>Welcome: <%= @user_details.full_name %></h4>
+<h4>Your user ID: <%= @user_details.id %></h4>
+<h4>Your email: <%= @user_details.email %></h4>
 
 <h3><%= link_to "Sign Out", destroy_user_session_path, method: :delete  %></h3>
