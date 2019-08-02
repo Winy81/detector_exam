@@ -28,7 +28,7 @@ RSpec.feature "Add card for user" do
 
   end
 
-    scenario "With invalid card details" do 
+  scenario "With invalid card details" do 
 
     login_as(@john)
 
