@@ -18,14 +18,14 @@
   <h4>Your card's expiry date: <%= @user_details.card.expiry_date.year %> / <%= @user_details.card.expiry_date.month %></h4>
 <% end %>
 
-<% unless current_user.card.nil? %>
-  <h4>Your postcode is: <%= @user_details.address %></h4>
+<% unless current_user.place.nil? %>
+  <h4>Your postcode is: <%= @user_details.place.postcode %></h4>
 <% else %>
   <h4>Your address is not registered yet</h4>
 <% end %>
 
-<% if current_user.address.nil? %>
-  <h5><%= link_to "Add Postcode", new_card_path %></h5>
+<% if current_user.place.nil? %>
+  <h5><%= link_to "Add Postcode", new_place_path %></h5>
 <% end %>
 
 <h3><%= link_to "Sign Out", destroy_user_session_path, method: :delete  %></h3>

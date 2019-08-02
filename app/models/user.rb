@@ -13,6 +13,6 @@ class User < ApplicationRecord
 
   has_one :card, dependent: :destroy
 
-  has_one :address, dependent: :destroy
+  has_one :place, dependent: :destroy
   
 end

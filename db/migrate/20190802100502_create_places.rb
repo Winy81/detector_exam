@@ -1,6 +1,6 @@
-class CreateAddresses < ActiveRecord::Migration[5.2]
+class CreatePlaces < ActiveRecord::Migration[5.2]
   def change
-    create_table :addresses do |t|
+    create_table :places do |t|
       t.string :postcode
       t.references :user, foreign_key: true
 

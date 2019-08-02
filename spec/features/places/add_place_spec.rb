@@ -16,9 +16,9 @@ RSpec.feature "Add card for user" do
 
     click_link('Add Postcode')
 
-    fill_in "address_postcode", with: "LS10 4QW"
+    fill_in "place_postcode", with: "LS10 4QW"
 
-    click_button "Save Postcode"
+    click_button "Save Place"
 
     expect(page).to have_content("Your postcode is: LS10 4QW")
 
