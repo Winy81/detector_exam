@@ -3,13 +3,19 @@
 <h4>Welcome: <%= @user_details.full_name %></h4>
 <h4>Your user ID: <%= @user_details.id %></h4>
 <h4>Your email: <%= @user_details.email %></h4>
+
 <% unless current_user.card.nil? %>
   <h4>Your card's last four digits: <%= @user_details.card.last_four_digits %></h4>
 <% else %>
   <h4>Your card is not registered yet</h4>
 <% end %>
+
 <% if current_user.card.nil? %>
   <h5><%= link_to "Add Card", new_card_path %></h5>
+<% end %>
+
+<% unless current_user.card.nil? %>
+  <h4>Your card's expiry date: <%= @user_details.card.expiry_date.year %> / <%= @user_details.card.expiry_date.month %></h4>
 <% end %>
 
 <h3><%= link_to "Sign Out", destroy_user_session_path, method: :delete  %></h3>

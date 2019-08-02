@@ -24,10 +24,11 @@ RSpec.feature "Add card for user" do
     expect(page).not_to have_content("Your card is not registered yet")
     expect(page).not_to have_link('Add Card')
     expect(page).to have_content("Your card's last four digits: 1234")
+    expect(page).to have_content("Your card's expiry date: 2019 / 8")
 
   end
 
-    scenario "With valid details" do 
+    scenario "With invalid details" do 
 
     login_as(@john)
 
