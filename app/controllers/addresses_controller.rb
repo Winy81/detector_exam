@@ -5,7 +5,7 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = Card.new(params.require(:address).permit(:postcode,:user_id))
+    @address = Address.new(params.require(:address).permit(:postcode,:user_id))
     if @address.save
       flash[:notce] = "Address has been added"
       redirect_to dashboards_path

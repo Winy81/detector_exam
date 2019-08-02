@@ -6,7 +6,7 @@ RSpec.feature "Add card for user" do
     @john = User.create!(first_name:"John", last_name:"Doe", email:"john@doe.com", password: "password")
   end
 
-  scenario "With valid details" do 
+  scenario "With valid card details" do 
 
     login_as(@john)
 
@@ -28,7 +28,7 @@ RSpec.feature "Add card for user" do
 
   end
 
-    scenario "With invalid details" do 
+    scenario "With invalid card details" do 
 
     login_as(@john)
 
