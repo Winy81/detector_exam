@@ -22,4 +22,6 @@ RSpec.feature "Add card for user" do
 
     expect(page).to have_content("Your postcode is: LS10 4QW")
 
+  end
+
 end
