@@ -16,7 +16,7 @@ RSpec.feature "User sign_in" do
     click_button "Log in"
 
     expect(page).to have_content("Signed in successfully.")
-    expect(page).to have_content("Welcome:#{@john.first_name}")
+    expect(page).to have_content("Welcome: #{@john.full_name}")
     expect(page).to have_link("Sign Out")
     expect(page).to_not have_link("Sign up")
     expect(page).to_not have_link("Sign in")
