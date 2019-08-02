@@ -1,0 +1,10 @@
+<h1>card#new</h1>
+
+<%= form_with scope: :card, url: cards_path, local:true do |f| %>
+  last_four_digits: <%= f.text_field :last_four_digits %>
+  exp_date: <%= f.text_field :expiry_date %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+
+<%= f.submit %>
+
+<% end %>

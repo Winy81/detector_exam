@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   resources :dashboards
 
-  resources :addresses
+  resources :cards
 
 end
