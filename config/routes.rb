@@ -7,8 +7,8 @@ Rails.application.routes.draw do
 
   resources :dashboards
 
-  resources :cards
+  resources :cards, only: [:new, :create]
 
-  resources :places
+  resources :places, only: [:new, :create]
 
 end
