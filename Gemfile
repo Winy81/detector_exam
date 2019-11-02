@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'devise', '~>4.6.2'
+gem 'devise', '~>4.7.1'
 
 gem 'rb-readline'
 
